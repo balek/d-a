@@ -1,0 +1,12 @@
+<index: element="d-a">
+    {{if @li}}
+        <li class="{{@wrapperClass}}{{if active}} active{{/}}">
+            <a as="elem" href="{{url}}" class="{{@class}}">
+                {{@content}}
+            </a>
+        </li>
+    {{else}}
+        <a as="elem" href="{{url}}" class="{{@class}}{{if active}} active{{/}}">
+            {{@content}}
+        </a>
+    {{/if}}
