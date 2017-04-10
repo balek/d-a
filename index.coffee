@@ -1,6 +1,3 @@
-_ = require 'lodash'
-
-
 module.exports = class
     view: __dirname
     init: ->
@@ -21,9 +18,9 @@ module.exports = class
         else
             @model.set 'url', href
             if startsWith == 'starts-with'
-                @model.set 'active', _.startsWith activePath + '/', href + '/'
+                @model.set 'active', (activePath + '/').startsWith href + '/'
             else if startsWith
-                @model.set 'active', _.startsWith activePath + '/', startsWith + '/'
+                @model.set 'active', (activePath + '/').startsWith startsWith + '/'
             else
                 @model.set 'active', activePath == href
 
